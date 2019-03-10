@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: Futura, sans-serif;
+  color: #4a4a4a;
+  background: #eaeaea;
+  line-height: 1.7;
+  transition: font-size 0.5s;
+}
+a {
+  color: #4a4a4a;
+  text-decoration: underline;
+  text-decoration-skip: ink;
+  transition: all 0.5s;
+}
+a:hover {
+  opacity: 0.5;
+}
+
+
+
+figure {
+  position: relative;
+}
+
+figure img {
+margin-bottom: 2em;
+display: block;
+width: 100%;
+background-size: contain;
+}
+section {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+h1 {
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+}
+
+/* Header and nav */
+nav ul {
+  list-style-type: none;
+}
+header {
+  position: fixed;
+  width: 100%;
+  height: 3.5em; 
+  background: rgba(191,191,191,0.75);
+  color: #eaeaea;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.25);
+  z-index: 1;
+}
+header a {
+    color: #eaeaea;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+header a:hover {
+    color: #eaeaea;
+}
+.branding {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+nav {
+  display: inline-block;
+  position: absolute;
+  right: -100%;
+  top: 3.5em;
+  height: 100%;
+  background: rgba(48,48,48,0.75);
+  min-height: 100vh;
+  width: 75%;
+  max-width: 15em;
+  transition: right 0.5s ease;
+}
+nav ul {
+    display: block;
+    margin: 0;
+}
+nav li {
+  display: block;
+  margin: 1em 1.5em;
+  text-align: right;
+}
+.nav-toggle {
+  cursor: pointer;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.nav-active nav {
+    right: 0;
+}
+
+
+
+.banner {
+  position: relative;
+  min-height: 75vh;
+  background-color: black;
+  background-image: url(../img/bwgibson.jpg);
+  background-position: center;
+  background-size:initial;
+  background-repeat: no-repeat;
+}
+
+
+
+
+.scroll {
+position: absolute;
+bottom: 0;
+width: 100%;
+text-align: center;
+display: block;
+text-decoration: none;
+font-size: 4em;
+color: #eaeaea
+
+}
+
+
+.scroll:hover {
+  color: #eaeaea
+}
+
+/*THE IMPORTANT STUFF!*/
+.contact {
+right: 0;
+}
+.contact img{
+width:30px;
+height: 30px;
+margin:0;
+}
+
+ul{
+  list-style-type: none;
+
+}
+
+p {
+  max-width: 30em;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  max-height:700px;
+  left: 0;
+  position: relative;
+  background-color: white;
+  border: solid 5px black;
+  margin: auto;
+
+}
+
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev  {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  bottom: 0;
+  margin: 0 2px;
+  background-color: white;
+  border: solid 1px black;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: -100vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 100%;
+    height:95vh;
+    max-width: 100%;
+    max-height: 95vh;
+    overflow: auto;
+    padding: 2em 1em;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#modal-active {
+    opacity: 1;
+    top: 50%;
+}
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 1.5em;
+    cursor: pointer;
+}
